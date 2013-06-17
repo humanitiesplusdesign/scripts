@@ -1,6 +1,6 @@
 # Scripts
 
-This repository will contain various scripts for working on data from the Mapping the Republic of Letters project. Every script is in a separate folder, together with a readme file containing detailed instrucions on how to run it.
+This repository will contain various scripts for working on data from the Mapping the Republic of Letters project. Every script is in a separate folder, together with a readme file containing detailed instructions on how to run it.
 
 Currently in the repository:
 
