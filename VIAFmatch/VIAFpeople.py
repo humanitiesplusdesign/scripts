@@ -17,13 +17,11 @@ from xml.dom import minidom
 from Tkinter import Tk
 from tkFileDialog import askopenfilename
 
-Tk().withdraw()
-# We don't want a full GUI, so keep the root window from appearing
-searchFile = askopenfilename(title='Please select the file with the data to be matched to VIAF')
-print(searchFile)
-
 # Show an "Open" dialog box and return the path to the selected input file
-# Build the url to invoke the VIAF search web service.
+Tk().withdraw()
+searchFile = askopenfilename(title='Please select the file with the data to be matched to VIAF')
+
+# Set the parameters of the URL for VIAF's search web service.
 baseUrl = "http://viaf.org/viaf/"
 service = "search?query=local.personalNames+all+"
 params = "+&maximumRecords=1&startRecord=1&sortKeys=holdingscount&httpAccept=text/xml"
@@ -41,8 +39,6 @@ noMatch = 0
 output = ""
 
 # Open the output tsv file. If the file does not exist it will be created.
-# Change the path to the file according to your needs.
-# Improvement to be made: generalize the script in order to ask for the path when the script is run in the terminal.
 outputFileName = searchFile[:-4] + 'VIAFmatch.tsv'
 print outputFileName
 outputFile = open(outputFileName, 'w')
