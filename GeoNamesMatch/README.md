@@ -70,10 +70,10 @@ e.g.: "PPL"
 **GeoNames URL**: The webpage where the toponym can be checked:
 e.g. "http://www.geonames.org/3038786"
 
-**GeoNames Latitude**: The latitude of the place:
+**GeoNames Latitude**: The latitude of the place associated to the toponym:
 e.g. "48.34683"
 
-**GeoNames Longitude**: The longitude of the toponym:
+**GeoNames Longitude**: The longitude of the place associated to the toponym:
 e.g. "2.16594"
 
 **Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no")
