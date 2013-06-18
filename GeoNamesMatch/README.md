@@ -70,7 +70,7 @@ e.g.: "PPL"
 **GeoNames URL**: The webpage where the tooponym can be checked:
 e.g. "http://www.geonames.org/3038786"
 
-**Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no)
+**Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no")
 
 **Corrected GeoNames ID**: Blank. In case the match generated automatically is not valid, but you have found the correct GeoNames record, please enter the ID here.
 
