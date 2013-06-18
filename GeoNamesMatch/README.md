@@ -9,7 +9,7 @@ The script takes an input file containing toponyms and uses the GeoNames search 
 The following parameters are passed to the webservice:
 - name_equals: the toponym
 - featureClass: P (Populated Place Features: http://www.geonames.org/export/codes.html)
-- country: the ISO-3166 country code associated to the place name
+- country: the ISO-3166 country code associated to the toponym
 - maxRows: 10
 
 If a possible match is found the script then parses the xml response, extracting from GeoNames the toponym and the ID.
