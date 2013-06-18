@@ -55,7 +55,7 @@ outputFileName = searchFile[:-4] + 'GeoNamesMatch.tsv'
 outputFile = open(outputFileName, 'w')
 
 # Create the headings of the tsv file.
-outputFile.write("Search Toponym\tSearch Country\tGeoNames Toponym\tGeoNames ID\tGeoNames Feature Code\tGeoNames URL\tValid?\tCorrected GeoNamesID\tCorrected GeoNames URL\tValidator (Initials)\n")
+outputFile.write("Search Toponym\tSearch Country\tGeoNames Toponym\tGeoNames ID\tGeoNames Feature Code\tGeoNames URL\tGeoNames Latitude\tGeoNames Longitude\tValid?\tCorrected GeoNamesID\tCorrected GeoNames URL\tValidator (Initials)\n")
 
 #Try a match for every entry in the file
 for line in placesEntry:
@@ -71,10 +71,14 @@ for line in placesEntry:
 
 	#Retrieve Geonames Toponym Name
  	toponymList = xmldoc.getElementsByTagName('toponymName')
+	#Retrieve Geonames Latitude
+	latList = xmldoc.getElementsByTagName('lat')
+	#Retrieve Geonames Longitude
+	lonList = xmldoc.getElementsByTagName('lng') 	
 	#Retrieve Geonames ID
 	idList = xmldoc.getElementsByTagName('geonameId') 	
- 	#Retrieve Geonames feature Code
-	codeList = xmldoc.getElementsByTagName('fcode')  	
+ 	#Retrieve Geonames Feature Code
+	codeList = xmldoc.getElementsByTagName('fcode')  		  	
 
 	searchToponym = unicode(cityName, 'utf-8')
  	
@@ -85,12 +89,14 @@ for line in placesEntry:
  		for toponym in toponymList:
  			toponymCount += 1
  			toponymFound = unicode(toponymList[toponymCount - 1].firstChild.nodeValue)
+ 			latFound = unicode(latList[toponymCount - 1].firstChild.nodeValue)
+ 			lonFound = unicode(lonList[toponymCount - 1].firstChild.nodeValue)
  			codeFound = unicode(codeList[toponymCount - 1].firstChild.nodeValue)
 	 		IDfound = unicode(idList[toponymCount - 1].firstChild.nodeValue)
  			URLfound = "http://www.geonames.org/" + IDfound
  				
 			print "Found: " + toponymFound
- 			output += searchToponym + "\t" + countryCode + "\t" + toponymFound + "\t" + IDfound + "\t" + codeFound + "\t" + URLfound + "\t\t\t\t\n"
+ 			output += searchToponym + "\t" + countryCode + "\t" + toponymFound + "\t" + IDfound + "\t" + codeFound + "\t" + URLfound + "\t" + latFound + "\t" + lonFound + "\t\t\t\t\n"
 
  		if toponymCount > 1:
  			multipleMatch +=1
@@ -101,7 +107,7 @@ for line in placesEntry:
  		print "###### " + searchToponym + " (" + countryCode + ")"
  		print "Not found"
  		
- 		output += searchToponym + "\t" + countryCode + "\tnothing found\tnothing found\tnothing found\tnothing found\t\t\t\t\n"
+ 		output += searchToponym + "\t" + countryCode + "\tnothing found\tnothing found\tnothing found\tnothing found\tnothing found\tnothing found\t\t\t\t\n"
  		
  		noMatch += 1
 

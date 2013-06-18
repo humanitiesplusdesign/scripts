@@ -67,8 +67,14 @@ e.g.: "3038786"
 **GeoNames Feature Code**: The GeoNames feature code within the class P associated with the toponym (for a list, see: http://www.geonames.org/export/codes.html)
 e.g.: "PPL"
 
-**GeoNames URL**: The webpage where the tooponym can be checked:
+**GeoNames URL**: The webpage where the toponym can be checked:
 e.g. "http://www.geonames.org/3038786"
+
+**GeoNames Latitude**: The latitude of the place:
+e.g. "48.34683"
+
+**GeoNames Longitude**: The longitude of the toponym:
+e.g. "2.16594"
 
 **Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no)
 
