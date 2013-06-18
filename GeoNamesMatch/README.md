@@ -4,7 +4,7 @@
 ## Introduction
     
 
-The script takes an input file containing toponyms and uses the GeoNames search webservice (http://www.geonames.org/export/geonames-search.html) to find possible matches with GeoNames records.
+The script takes an input file containing toponyms and uses the GeoNames search webservice (http://www.geonames.org/export/geonames-search.html) to find possible matches with GeoNames records, and retrieve the GeoNames toponym, ID, feature code, and coordinates.
 
 The following parameters are passed to the webservice:
 - name_equals: the toponym
