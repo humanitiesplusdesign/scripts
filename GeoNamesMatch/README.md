@@ -77,10 +77,7 @@ e.g. "48.34683"
 **GeoNames Longitude**: The longitude of the toponym:
 e.g. "2.16594"
 
-**Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no)
-=======
 **Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no")
->>>>>>> b3ea5d5caf0fc3e794b9871aecb47b3796ee282f
 
 **Corrected GeoNames ID**: Blank. In case the match generated automatically is not valid, but you have found the correct GeoNames record, please enter the ID here.
 
