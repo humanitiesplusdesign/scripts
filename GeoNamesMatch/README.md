@@ -24,13 +24,13 @@ The input file should be a .tsv containing a single line for every place name we
 
 _e.g._:
 
-> Abbeville	FR
-> Aberdeen	UK
-> Agenvillers	FR
-> Aire	CH
-> Aix-en-Provence	FR
-> Alassio	IT
-> Almaty	KZ
+> Abbeville	FR <br/>
+> Aberdeen	UK <br/>
+> Agenvillers	FR <br/>
+> Aire	CH <br/>
+> Aix-en-Provence	FR <br/>
+> Alassio	IT <br/>
+> Almaty	KZ <br/>
 
 IS0-3166 Country codes can be found at: http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements.htm
 
@@ -70,6 +70,7 @@ e.g.: "PPL"
 **GeoNames URL**: The webpage where the toponym can be checked:
 e.g. "http://www.geonames.org/3038786"
 
+<<<<<<< HEAD
 **GeoNames Latitude**: The latitude of the place:
 e.g. "48.34683"
 
@@ -77,6 +78,9 @@ e.g. "48.34683"
 e.g. "2.16594"
 
 **Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no)
+=======
+**Valid?**: Blank. Here you will enter your assessment of the validity of the match ("yes" or "no")
+>>>>>>> b3ea5d5caf0fc3e794b9871aecb47b3796ee282f
 
 **Corrected GeoNames ID**: Blank. In case the match generated automatically is not valid, but you have found the correct GeoNames record, please enter the ID here.
 
