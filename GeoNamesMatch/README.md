@@ -70,7 +70,6 @@ e.g.: "PPL"
 **GeoNames URL**: The webpage where the toponym can be checked:
 e.g. "http://www.geonames.org/3038786"
 
-<<<<<<< HEAD
 **GeoNames Latitude**: The latitude of the place:
 e.g. "48.34683"
 
