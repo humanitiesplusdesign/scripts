@@ -89,7 +89,7 @@ e.g.: "32053659"
 **VIAF URL**: The URL for the VIAF match
 e.g.: "http://www.viaf.org/32053659"
 
-**Valid?**: Blank. here you will enter your assessment of the validity of the match ("yes" or "no)
+**Valid?**: Blank. here you will enter your assessment of the validity of the match ("yes" or "no")
 
 **Corrected VIAF ID**: Blank. In case the match generated automatically was not valid, but you have found the correct VIAF record, please enter the ID here.
 
