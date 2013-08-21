@@ -40,6 +40,8 @@ The use of this codes significantly helps disambiguating the same toponyms in di
 
 In order to use the script, a personal and free account on GeoNames should be created first, registering at http://www.geonames.org/login
 
+**IMPORTANT:** A second step of enabling your account to use free webservices is required. Login to your account on Geonames and click the text link to enable.
+
 This makes it possible to have 30,000 credits a day with an hourly limit of 2000 credits. A credit is a web service request hit for most services. In other words it means that the script can be used by a registered user to match up to 30,000/day - 2,000/hour toponyms against GeoNames.
 
 Once the registration is complete, the username has been created, and the input .tsv file with the toponyms and country codes is ready, go to the directory where the script is and run:
