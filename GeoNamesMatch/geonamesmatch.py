@@ -55,7 +55,7 @@ outputFileName = searchFile[:-4] + 'GeoNamesMatch.tsv'
 outputFile = open(outputFileName, 'w')
 
 # Create the headings of the tsv file.
-outputFile.write("Search Toponym\tSearch Country\tGeoNames Toponym\tGeoNames ID\tGeoNames Feature Code\tGeoNames URL\tGeoNames Latitude\tGeoNames Longitude\tValid?\tCorrected GeoNamesID\tCorrected GeoNames URL\tValidator (Initials)\n")
+outputFile.write("Search Toponym\tSearch Country\tGeoNames Toponym\tGeoNames ID\tGeoNames Feature Code\tGeoNames URL\tGeoNames Latitude\tGeoNames Longitude\tGeoNames Coordinates\tValid?\tCorrected GeoNamesID\tCorrected GeoNames URL\tValidator (Initials)\n")
 
 #Try a match for every entry in the file
 for line in placesEntry:
@@ -91,12 +91,13 @@ for line in placesEntry:
  			toponymFound = unicode(toponymList[toponymCount - 1].firstChild.nodeValue)
  			latFound = unicode(latList[toponymCount - 1].firstChild.nodeValue)
  			lonFound = unicode(lonList[toponymCount - 1].firstChild.nodeValue)
+ 			coordinatesFound = lat + "," + lon
  			codeFound = unicode(codeList[toponymCount - 1].firstChild.nodeValue)
 	 		IDfound = unicode(idList[toponymCount - 1].firstChild.nodeValue)
  			URLfound = "http://www.geonames.org/" + IDfound
  				
 			print "Found: " + toponymFound
- 			output += searchToponym + "\t" + countryCode + "\t" + toponymFound + "\t" + IDfound + "\t" + codeFound + "\t" + URLfound + "\t" + latFound + "\t" + lonFound + "\t\t\t\t\n"
+ 			output += searchToponym + "\t" + countryCode + "\t" + toponymFound + "\t" + IDfound + "\t" + codeFound + "\t" + URLfound + "\t" + latFound + "\t" + lonFound + "\t" + coordinatesFound + "\t\t\t\t\n"
 
  		if toponymCount > 1:
  			multipleMatch +=1
