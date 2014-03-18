@@ -91,7 +91,7 @@ for line in placesEntry:
  			toponymFound = unicode(toponymList[toponymCount - 1].firstChild.nodeValue)
  			latFound = unicode(latList[toponymCount - 1].firstChild.nodeValue)
  			lonFound = unicode(lonList[toponymCount - 1].firstChild.nodeValue)
- 			coordinatesFound = lat + "," + lon
+ 			coordinatesFound = latFound + "," + lonFound
  			codeFound = unicode(codeList[toponymCount - 1].firstChild.nodeValue)
 	 		IDfound = unicode(idList[toponymCount - 1].firstChild.nodeValue)
  			URLfound = "http://www.geonames.org/" + IDfound
