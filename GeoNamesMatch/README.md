@@ -20,7 +20,7 @@ Finally, it creates an output .tsv file that can be then used for manual validat
 
 The input file should be a .tsv containing a single line for every place name we want to match against GeoNames. The syntax for a search string in the search file should be:
 
-`[Place Name][TAB][IS-3166 Country Code][NEWLINE]`
+`[Place Name][TAB][ISO-3166 Country Code][NEWLINE]`
 
 _e.g._:
 
@@ -32,9 +32,16 @@ _e.g._:
 > Alassio	IT <br/>
 > Almaty	KZ <br/>
 
-IS0-3166 Country codes can be found at: http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements.htm
+###Why ISO Code?
+Geocoding rarely works without error or multiple possible results. The use of the ISO code significantly helps disambiguate toponyms and narrows down the result set. To lookup ISO-3166 Country codes, use the ISO.tsv file. Open it in Open Refine as a project with your own locations file in another project. 
+**STEPS:**
+1. If you do not already have a column in your own project for countries (not city, country, but country in its own column) create one.
+2. Choose the country column from your data table and select "create a new column based on this column." Use a cell.cross GREL expression  match country names from your file against country names in the ISO project and pull the corresponding ISO code. 
+	3. 	It may look like this:   cell.cross("ISO.tsv", "Country").cells["code"].value[0]
+	
+Additional ISO-3166 Country codes can be found at: http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements.htm
 
-The use of this codes significantly helps disambiguating the same toponyms in different Countries and narrow down the result set.
+
 
 ## Running the script
 
